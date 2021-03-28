@@ -4,6 +4,10 @@ import com.kozich.arraytask.entity.array.ArrayForTask;
 import com.kozich.arraytask.service.array.ArraySort;
 
 public class ArraySortImpl implements ArraySort {
+    public ArraySortImpl() {
+
+    }
+
     public void bubbleSort(ArrayForTask arrayForTask) {
         int[] currentArray = arrayForTask.getCurrentArray();
         int n = currentArray.length;
