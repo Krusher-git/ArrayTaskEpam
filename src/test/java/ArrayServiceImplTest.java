@@ -1,9 +1,7 @@
 
 
 import com.kozich.arraytask.entity.array.ArrayForTask;
-import com.kozich.arraytask.service.array.impl.ArrayStatsImpl;
-import com.kozich.arraytask.service.array.impl.ChangeArrayImpl;
-import com.kozich.arraytask.service.array.impl.SearchElementsImpl;
+import com.kozich.arraytask.service.array.impl.*;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
@@ -79,5 +77,35 @@ public class ArrayServiceImplTest {
         ArrayForTask arrayForTask = new ArrayForTask(currentArray);
         ChangeArrayImpl changeArray = new ChangeArrayImpl();
         assertEquals(changeArray.changeAllEvenElements(arrayForTask), expected);
+    }
+
+    @Test
+    void quickSortTest() {
+        int[] currentArray = {2, 3, 5, 18, 10, -5};
+        int expected = -5;
+        ArrayForTask arrayForTask = new ArrayForTask(currentArray);
+        ArraySortImpl arraySort = new ArraySortImpl();
+        arraySort.quickSort(arrayForTask, 0, currentArray.length - 1);
+        assertEquals(arrayForTask.getCurrentArray()[0], expected);
+    }
+
+    @Test
+    void bubbleSortTest() {
+        int[] currentArray = {2, 3, 5, 18, 10, -5};
+        int expected = -5;
+        ArrayForTask arrayForTask = new ArrayForTask(currentArray);
+        ArraySortImpl arraySort = new ArraySortImpl();
+        arraySort.bubbleSort(arrayForTask);
+        assertEquals(arrayForTask.getCurrentArray()[0], expected);
+    }
+
+    @Test
+    void selectSortTest() {
+        int[] currentArray = {2, 3, 5, 18, 10, -5};
+        int expected = -5;
+        ArrayForTask arrayForTask = new ArrayForTask(currentArray);
+        ArraySortImpl arraySort = new ArraySortImpl();
+        arraySort.selectSort(arrayForTask);
+        assertEquals(arrayForTask.getCurrentArray()[0], expected);
     }
 }
