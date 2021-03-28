@@ -2,8 +2,11 @@ package com.kozich.arraytask.entity.array;
 
 import com.kozich.arraytask.exception.ArrayException;
 
+import java.util.Arrays;
+
 public class ArrayForTask implements Cloneable {
     private int[] currentArray;
+
 
     public ArrayForTask() {
 
@@ -13,7 +16,7 @@ public class ArrayForTask implements Cloneable {
         this.currentArray = array;
     }
 
-    public int[] getCurrentArray(){
+    public int[] getCurrentArray() {
         if (currentArray.length > 0) {
             return arrayCopy();
         } else try {
@@ -32,6 +35,15 @@ public class ArrayForTask implements Cloneable {
     private int[] arrayCopy() {
         int[] arrayReturn = currentArray;
         return arrayReturn;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder line = new StringBuilder();
+        for (int i : getCurrentArray()) {
+            line.append(i).append(", ");
+        }
+        return line.toString();
     }
 
 }

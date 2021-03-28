@@ -19,6 +19,11 @@ public class FileInfo {
 
     }
 
+    @Override
+    public String toString() {
+        return file.getPath();
+    }
+
     public void setFile(File file) {
         this.file = file;
     }
