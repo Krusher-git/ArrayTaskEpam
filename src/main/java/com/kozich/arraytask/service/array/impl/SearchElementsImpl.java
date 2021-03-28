@@ -1,11 +1,12 @@
-package com.kozich.arraytask.service;
+package com.kozich.arraytask.service.array.impl;
 
-import com.kozich.arraytask.array.ArrayForTask;
+import com.kozich.arraytask.entity.array.ArrayForTask;
+import com.kozich.arraytask.service.array.SearchElements;
 
-public class SearchElementsInArray {
+public class SearchElementsImpl implements SearchElements {
 
 
-    public SearchElementsInArray() {
+    public SearchElementsImpl() {
 
     }
 

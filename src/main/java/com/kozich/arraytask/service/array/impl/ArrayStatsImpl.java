@@ -1,11 +1,12 @@
-package com.kozich.arraytask.service;
+package com.kozich.arraytask.service.array.impl;
 
-import com.kozich.arraytask.array.ArrayForTask;
+import com.kozich.arraytask.entity.array.ArrayForTask;
+import com.kozich.arraytask.service.array.ArrayStats;
 
-public class ArrayStats {
+public class ArrayStatsImpl implements ArrayStats {
 
 
-    public ArrayStats() {
+    public ArrayStatsImpl() {
 
     }
 
@@ -28,7 +29,7 @@ public class ArrayStats {
         return sum;
     }
 
-    public int getAmountOfElements(boolean check, ArrayForTask arrayForTask) {
+    public int getAmountOfElements(ArrayForTask arrayForTask, boolean negative) {
         int[] currentArray = arrayForTask.getCurrentArray();
         int amount = 0;
         for (int current : currentArray) {
@@ -36,7 +37,7 @@ public class ArrayStats {
                 amount++;
             }
         }
-        if (check) {
+        if (!negative) {
             return currentArray.length - amount;
         } else {
             return amount;

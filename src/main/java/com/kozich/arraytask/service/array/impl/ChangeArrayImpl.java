@@ -1,10 +1,11 @@
-package com.kozich.arraytask.service;
+package com.kozich.arraytask.service.array.impl;
 
-import com.kozich.arraytask.array.ArrayForTask;
+import com.kozich.arraytask.entity.array.ArrayForTask;
+import com.kozich.arraytask.service.array.ChangeArray;
 
-public class ChangeArray {
+public class ChangeArrayImpl implements ChangeArray {
 
-    public ChangeArray() {
+    public ChangeArrayImpl() {
 
     }
 
@@ -21,14 +22,14 @@ public class ChangeArray {
     public int[] changeAllEvenElements(ArrayForTask arrayForTask) {
         int[] currentArray = arrayForTask.getCurrentArray();
         for (int i = 0; i < currentArray.length; i++) {
-            if (currentArray[i] / 2 == 0) {
+            if (currentArray[i] % 2 == 0) {
                 currentArray[i]++;
             }
         }
         return currentArray;
     }
 
-    public int[] changePositionOfElements(ArrayForTask arrayForTask) {
+    public int[] changePositionOfFirstElement(ArrayForTask arrayForTask) {
         int[] currentArray = arrayForTask.getCurrentArray();
         for (int i = 0; i < currentArray.length; i++) {
             if (i != currentArray.length - 1) {

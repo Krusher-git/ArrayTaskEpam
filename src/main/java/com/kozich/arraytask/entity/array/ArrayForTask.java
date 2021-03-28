@@ -1,4 +1,6 @@
-package com.kozich.arraytask.array;
+package com.kozich.arraytask.entity.array;
+
+import com.kozich.arraytask.exception.ArrayException;
 
 public class ArrayForTask implements Cloneable {
     private int[] currentArray;
@@ -11,10 +13,15 @@ public class ArrayForTask implements Cloneable {
         this.currentArray = array;
     }
 
-    public int[] getCurrentArray() {
+    public int[] getCurrentArray(){
         if (currentArray.length > 0) {
             return arrayCopy();
-        } else throw new IllegalArgumentException("Array is not exist");
+        } else try {
+            throw new ArrayException("Error with array");
+        } catch (ArrayException e) {
+            e.printStackTrace();
+        }
+        return new int[]{0};
     }
 
     public void setCurrentArray(int[] currentArray) {
