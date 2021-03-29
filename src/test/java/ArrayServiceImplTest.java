@@ -6,6 +6,9 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
+/*TODO:
+               Correct tests
+             */
 public class ArrayServiceImplTest {
     @Test
     void getSumTest() {

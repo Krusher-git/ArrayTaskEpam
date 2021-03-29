@@ -17,6 +17,9 @@ public class ArrayEntity {
 
     public int[] getCurrentArray() {
         if (currentArray == null) {
+            /*TODO:
+               Replace return null with smth useful
+             */
             return null;
         }
         int[] givenArray = new int[currentArray.length];
