@@ -1,22 +1,21 @@
 package com.kozich.arraytask.service.file.impl;
 
-import com.kozich.arraytask.entity.file.FileInfo;
+import com.kozich.arraytask.exception.ArrayException;
 import com.kozich.arraytask.service.file.FileValidation;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.Scanner;
 
 public class FileValidationImpl implements FileValidation {
-    public FileValidationImpl() {
-    }
 
-    public boolean isUseful(FileInfo fileInfo) throws IOException {
-
+    public boolean isUseful(String path) throws ArrayException {
         FileReader fileReader = null;
         try {
-            fileReader = new FileReader(fileInfo.toString());
+            File file = new File(path);
+            if(!file.exists()){
+                return false;
+            }
+            fileReader = new FileReader(file);
             Scanner scanner = new Scanner(fileReader);
             while (scanner.hasNextLine()) {
                 String check = scanner.nextLine();
@@ -24,11 +23,15 @@ public class FileValidationImpl implements FileValidation {
                     return true;
                 }
             }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+        } catch (IOException e) {
+            throw new ArrayException("File doesn't exists", e);
         } finally {
             if (fileReader != null) {
-                fileReader.close();
+                try {
+                    fileReader.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         }
         return false;

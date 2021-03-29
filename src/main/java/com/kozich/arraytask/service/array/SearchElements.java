@@ -1,10 +1,10 @@
 package com.kozich.arraytask.service.array;
 
-import com.kozich.arraytask.entity.array.ArrayForTask;
+import com.kozich.arraytask.entity.ArrayEntity;
 
 public interface SearchElements {
-    int findMaxElement(ArrayForTask arrayForTask);
+    int findMaxElement(ArrayEntity arrayEntity);
 
-    int findMinElement(ArrayForTask arrayForTask);
+    int findMinElement(ArrayEntity arrayEntity);
 
 }

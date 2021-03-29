@@ -1,12 +1,12 @@
 package com.kozich.arraytask.service.file;
 
-import com.kozich.arraytask.entity.array.ArrayForTask;
-import com.kozich.arraytask.entity.file.FileInfo;
+import com.kozich.arraytask.entity.ArrayEntity;
+import com.kozich.arraytask.exception.ArrayException;
 
 import java.io.IOException;
 
 public interface FileEditor {
-    void readFromFile(FileInfo fileInfo) throws IOException;
+    void readFromFile(String path) throws ArrayException;
 
-    void writeIntoFile(FileInfo fileInfo, ArrayForTask arrayForTask) throws IOException;
+    void writeIntoFile(String path, ArrayEntity arrayEntity) throws ArrayException;
 }

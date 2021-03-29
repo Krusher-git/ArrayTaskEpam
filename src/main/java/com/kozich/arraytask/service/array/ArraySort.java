@@ -1,11 +1,11 @@
 package com.kozich.arraytask.service.array;
 
-import com.kozich.arraytask.entity.array.ArrayForTask;
+import com.kozich.arraytask.entity.ArrayEntity;
 
 public interface ArraySort {
-    void bubbleSort(ArrayForTask arrayForTask);
+    void bubbleSort(ArrayEntity arrayEntity);
 
-    void quickSort(ArrayForTask arrayForTask, int left, int right);
+    void quickSort(ArrayEntity arrayEntity, int left, int right);
 
-    void selectSort(ArrayForTask arrayForTask);
+    void selectSort(ArrayEntity arrayEntity);
 }

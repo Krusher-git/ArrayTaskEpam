@@ -1,15 +1,15 @@
 package com.kozich.arraytask.service.array.impl;
 
-import com.kozich.arraytask.entity.array.ArrayForTask;
+import com.kozich.arraytask.entity.ArrayEntity;
 import com.kozich.arraytask.service.array.ArraySort;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class ArraySortImpl implements ArraySort {
-    public ArraySortImpl() {
+    static Logger logger = LogManager.getLogger();
 
-    }
-
-    public void bubbleSort(ArrayForTask arrayForTask) {
-        int[] currentArray = arrayForTask.getCurrentArray();
+    public void bubbleSort(ArrayEntity arrayEntity) {
+        int[] currentArray = arrayEntity.getCurrentArray();
         int n = currentArray.length;
         for (int i = 0; i < n - 1; i++) {
             for (int j = 0; j < n - i - 1; j++) {
@@ -20,10 +20,11 @@ public class ArraySortImpl implements ArraySort {
                 }
             }
         }
+        logger.info("Sorted with bubble sort");
     }
 
-    public void quickSort(ArrayForTask arrayForTask, int left, int right) {
-        int[] currentArray = arrayForTask.getCurrentArray();
+    public void quickSort(ArrayEntity arrayEntity, int left, int right) {
+        int[] currentArray = arrayEntity.getCurrentArray();
         if (currentArray.length == 0) {
             return;
         }
@@ -46,14 +47,15 @@ public class ArraySortImpl implements ArraySort {
             }
         }
         if (left < j)
-            quickSort(arrayForTask, left, j);
+            quickSort(arrayEntity, left, j);
 
         if (right > i)
-            quickSort(arrayForTask, i, right);
+            quickSort(arrayEntity, i, right);
+        logger.info("Sorted with quick sort");
     }
 
-    public void selectSort(ArrayForTask arrayForTask) {
-        int[] currentArray = arrayForTask.getCurrentArray();
+    public void selectSort(ArrayEntity arrayEntity) {
+        int[] currentArray = arrayEntity.getCurrentArray();
         int n = currentArray.length;
         for (int i = 0; i < n - 1; i++) {
             int current = i;
@@ -66,5 +68,6 @@ public class ArraySortImpl implements ArraySort {
             currentArray[current] = currentArray[i];
             currentArray[i] = temp;
         }
+        logger.info("Sorted with select sort");
     }
 }

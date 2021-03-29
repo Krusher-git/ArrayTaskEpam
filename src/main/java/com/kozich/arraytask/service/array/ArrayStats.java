@@ -1,11 +1,11 @@
 package com.kozich.arraytask.service.array;
 
-import com.kozich.arraytask.entity.array.ArrayForTask;
+import com.kozich.arraytask.entity.ArrayEntity;
 
 public interface ArrayStats {
-    double getMiddleValue(ArrayForTask arrayForTask);
+    double getMiddleValue(ArrayEntity arrayEntity);
 
-    int getSum(ArrayForTask arrayForTask);
+    int getSum(ArrayEntity arrayEntity);
 
-    int getAmountOfElements(ArrayForTask arrayForTask, boolean check);
+    int getAmountOfElements(ArrayEntity arrayEntity, boolean check);
 }

@@ -1,49 +1,58 @@
 package com.kozich.arraytask.service.file.impl;
 
-import com.kozich.arraytask.entity.array.ArrayForTask;
-import com.kozich.arraytask.entity.file.FileInfo;
+import com.kozich.arraytask.entity.ArrayEntity;
+import com.kozich.arraytask.exception.ArrayException;
 import com.kozich.arraytask.service.file.FileEditor;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
 public class FileEditorImpl implements FileEditor {
-    public FileEditorImpl() {
-    }
 
-    public void readFromFile(FileInfo fileInfo) throws IOException {
+    static Logger logger = LogManager.getLogger();
+
+    public void readFromFile(String path) throws ArrayException {
 
         FileReader fileReader = null;
         try {
-            fileReader = new FileReader(fileInfo.toString());
+            fileReader = new FileReader(path);
             Scanner scanner = new Scanner(fileReader);
             while (scanner.hasNextLine()) {
                 System.out.println(scanner.nextLine());
             }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+        } catch (IOException e) {
+            throw new ArrayException("Error with file", e);
         } finally {
             if (fileReader != null) {
-                fileReader.close();
+                try {
+                    fileReader.close();
+                } catch (IOException e) {
+                    logger.error(e);
+                }
             }
         }
 
     }
 
-    public void writeIntoFile(FileInfo fileInfo, ArrayForTask arrayForTask) throws IOException {
+    public void writeIntoFile(String path, ArrayEntity arrayEntity) throws ArrayException {
 
         FileWriter fileWriter = null;
         try {
-            fileWriter = new FileWriter(fileInfo.toString());
-            fileWriter.write(arrayForTask.toString());
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            fileWriter = new FileWriter(path);
+            fileWriter.write(arrayEntity.toString());
+        } catch (IOException e) {
+            throw new ArrayException("Error with file", e);
         } finally {
             if (fileWriter != null) {
-                fileWriter.close();
+                try {
+                    fileWriter.close();
+                } catch (IOException e) {
+                    logger.error(e);
+                }
             }
         }
 

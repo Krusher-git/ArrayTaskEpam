@@ -1,12 +1,12 @@
 package com.kozich.arraytask.service.array;
 
-import com.kozich.arraytask.entity.array.ArrayForTask;
+import com.kozich.arraytask.entity.ArrayEntity;
 
 public interface ChangeArray {
-    int[] changeAllPositiveElements(ArrayForTask arrayForTask);
+    void changeAllPositiveElements(ArrayEntity arrayEntity);
 
-    int[] changeAllEvenElements(ArrayForTask arrayForTask);
+    void changeAllEvenElements(ArrayEntity arrayEntity);
 
-    int[] changePositionOfFirstElement(ArrayForTask arrayForTask);
+    void changePositionOfFirstElement(ArrayEntity arrayEntity);
 
 }

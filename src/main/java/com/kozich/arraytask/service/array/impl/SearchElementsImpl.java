@@ -1,17 +1,13 @@
 package com.kozich.arraytask.service.array.impl;
 
-import com.kozich.arraytask.entity.array.ArrayForTask;
+import com.kozich.arraytask.entity.ArrayEntity;
 import com.kozich.arraytask.service.array.SearchElements;
 
 public class SearchElementsImpl implements SearchElements {
 
 
-    public SearchElementsImpl() {
-
-    }
-
-    public int findMaxElement(ArrayForTask arrayForTask) {
-        int[] currentArray = arrayForTask.getCurrentArray();
+    public int findMaxElement(ArrayEntity arrayEntity) {
+        int[] currentArray = arrayEntity.getCurrentArray();
         int max = currentArray[0];
         for (int currentValue : currentArray) {
             if (max < currentValue) {
@@ -21,8 +17,8 @@ public class SearchElementsImpl implements SearchElements {
         return max;
     }
 
-    public int findMinElement(ArrayForTask arrayForTask) {
-        int[] currentArray = arrayForTask.getCurrentArray();
+    public int findMinElement(ArrayEntity arrayEntity) {
+        int[] currentArray = arrayEntity.getCurrentArray();
         int min = currentArray[0];
         for (int currentValue : currentArray) {
             if (min > currentValue) {
