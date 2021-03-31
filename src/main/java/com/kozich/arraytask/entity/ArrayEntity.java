@@ -1,11 +1,8 @@
 package com.kozich.arraytask.entity;
 
-import com.kozich.arraytask.exception.ArrayException;
-
 
 public class ArrayEntity {
     private int[] currentArray;
-
 
     public ArrayEntity(int... array) {
         this.currentArray = array;
@@ -18,6 +15,7 @@ public class ArrayEntity {
              */
             return null;
         }
+
         int[] givenArray = new int[currentArray.length];
         for (int i = 0; i < currentArray.length; i++) {
             givenArray[i] = currentArray[i];
