@@ -10,6 +10,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
+
 /*TODO:
                Refactor packages and their names (very important for file-classes)
              */
@@ -18,9 +19,8 @@ public class FileEditorImpl implements FileEditor {
     static Logger logger = LogManager.getLogger();
 
     public void readFromFile(String path) throws ArrayException {
-
         FileReader fileReader = null;
-        try {
+        try  {
             fileReader = new FileReader(path);
             Scanner scanner = new Scanner(fileReader);
             while (scanner.hasNextLine()) {

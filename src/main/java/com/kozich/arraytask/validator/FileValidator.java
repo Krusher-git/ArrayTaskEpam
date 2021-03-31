@@ -1,25 +1,30 @@
-package com.kozich.arraytask.service.file.impl;
+package com.kozich.arraytask.validator;
 
 import com.kozich.arraytask.exception.ArrayException;
-import com.kozich.arraytask.service.file.FileValidation;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Scanner;
 
-public class FileValidationImpl implements FileValidation {
+public class FileValidator {
+    static Logger logger = LogManager.getLogger();
+    static final String CHECKER = "[^a-z]+";
 
-    public boolean isUseful(String path) throws ArrayException {
+    static public boolean isUseful(String path) throws ArrayException {
         FileReader fileReader = null;
         try {
             File file = new File(path);
-            if(!file.exists()){
+            if (!file.exists()) {
                 return false;
             }
             fileReader = new FileReader(file);
             Scanner scanner = new Scanner(fileReader);
             while (scanner.hasNextLine()) {
                 String check = scanner.nextLine();
-                if (!check.matches("[a-z]+")) {
+                if (check.matches(CHECKER)) {
                     return true;
                 }
             }
@@ -30,7 +35,7 @@ public class FileValidationImpl implements FileValidation {
                 try {
                     fileReader.close();
                 } catch (IOException e) {
-                    e.printStackTrace();
+                    logger.error("Error with fileReader closing");
                 }
             }
         }
