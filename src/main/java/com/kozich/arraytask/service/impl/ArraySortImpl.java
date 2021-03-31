@@ -9,26 +9,7 @@ import org.apache.logging.log4j.Logger;
 public class ArraySortImpl implements ArraySort {
     static Logger logger = LogManager.getLogger();
 
-    public void bubbleSort(ArrayEntity arrayEntity) {
-        int[] currentArray = arrayEntity.getCurrentArray();
-        int n = currentArray.length;
-        for (int i = 0; i < n - 1; i++) {
-            for (int j = 0; j < n - i - 1; j++) {
-                if (currentArray[j] > currentArray[j + 1]) {
-                    int temp = currentArray[j];
-                    currentArray[j] = currentArray[j + 1];
-                    currentArray[j + 1] = temp;
-                }
-            }
-        }
-        logger.log(Level.INFO, "Sorted with bubble sort");
-    }
-
-    public void quickSort(ArrayEntity arrayEntity, int left, int right) {
-        int[] currentArray = arrayEntity.getCurrentArray();
-        if (currentArray.length == 0) {
-            return;
-        }
+    private void quickSortImpl(int[] currentArray, int left, int right) {
         int middle = (left + right) / 2;
         int middleValue = currentArray[middle];
         int i = left, j = right;
@@ -47,11 +28,37 @@ public class ArraySortImpl implements ArraySort {
                 j--;
             }
         }
-        if (left < j)
-            quickSort(arrayEntity, left, j);
+        if (left < j) {
+            quickSortImpl(currentArray, left, j);
+        }
+        if (right > i) {
+            quickSortImpl(currentArray, i, right);
+        }
+    }
 
-        if (right > i)
-            quickSort(arrayEntity, i, right);
+    public void bubbleSort(ArrayEntity arrayEntity) {
+        int[] currentArray = arrayEntity.getCurrentArray();
+        int n = currentArray.length;
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (currentArray[j] > currentArray[j + 1]) {
+                    int temp = currentArray[j];
+                    currentArray[j] = currentArray[j + 1];
+                    currentArray[j + 1] = temp;
+                }
+            }
+        }
+        logger.log(Level.INFO, "Sorted with bubble sort");
+        arrayEntity.setCurrentArray(currentArray);
+    }
+
+    public void quickSort(ArrayEntity arrayEntity, int left, int right) {
+        int[] currentArray = arrayEntity.getCurrentArray();
+        if (currentArray.length <= 0) {
+            return;
+        }
+        quickSortImpl(currentArray, left, right);
+        arrayEntity.setCurrentArray(currentArray);
         logger.log(Level.INFO, "Sorted with quick sort");
     }
 
@@ -70,5 +77,6 @@ public class ArraySortImpl implements ArraySort {
             currentArray[i] = temp;
         }
         logger.log(Level.INFO, "Sorted with select sort");
+        arrayEntity.setCurrentArray(currentArray);
     }
 }

@@ -18,6 +18,7 @@ public class ChangeArrayImpl implements ChangeArray {
             }
         }
         logger.log(Level.INFO, "All positive elements have been changed");
+        arrayEntity.setCurrentArray(currentArray);
     }
 
     public void changeAllEvenElements(ArrayEntity arrayEntity) {
@@ -28,6 +29,7 @@ public class ChangeArrayImpl implements ChangeArray {
             }
         }
         logger.log(Level.INFO, "All even elements have been changed");
+        arrayEntity.setCurrentArray(currentArray);
     }
 
     public void changePositionOfFirstElement(ArrayEntity arrayEntity) {
@@ -40,5 +42,6 @@ public class ChangeArrayImpl implements ChangeArray {
             }
         }
         logger.log(Level.INFO, "Position of the frits element have been changed");
+        arrayEntity.setCurrentArray(currentArray);
     }
 }
