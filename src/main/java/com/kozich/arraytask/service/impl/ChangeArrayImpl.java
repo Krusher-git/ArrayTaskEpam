@@ -1,7 +1,8 @@
-package com.kozich.arraytask.service.array.impl;
+package com.kozich.arraytask.service.impl;
 
 import com.kozich.arraytask.entity.ArrayEntity;
-import com.kozich.arraytask.service.array.ChangeArray;
+import com.kozich.arraytask.service.ChangeArray;
+import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -16,7 +17,7 @@ public class ChangeArrayImpl implements ChangeArray {
                 currentArray[i] = -1;
             }
         }
-        logger.info("All positive elements have been changed");
+        logger.log(Level.INFO, "All positive elements have been changed");
     }
 
     public void changeAllEvenElements(ArrayEntity arrayEntity) {
@@ -26,7 +27,7 @@ public class ChangeArrayImpl implements ChangeArray {
                 currentArray[i]++;
             }
         }
-        logger.info("All even elements have been changed");
+        logger.log(Level.INFO, "All even elements have been changed");
     }
 
     public void changePositionOfFirstElement(ArrayEntity arrayEntity) {
@@ -38,6 +39,6 @@ public class ChangeArrayImpl implements ChangeArray {
                 currentArray[i + 1] = temp;
             }
         }
-        logger.info("Position of the frits element have been changed");
+        logger.log(Level.INFO, "Position of the frits element have been changed");
     }
 }

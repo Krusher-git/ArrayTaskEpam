@@ -1,7 +1,7 @@
 
 
 import com.kozich.arraytask.entity.ArrayEntity;
-import com.kozich.arraytask.service.array.impl.*;
+import com.kozich.arraytask.service.impl.*;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;

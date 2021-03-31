@@ -1,7 +1,7 @@
-package com.kozich.arraytask.service.array.impl;
+package com.kozich.arraytask.service.impl;
 
 import com.kozich.arraytask.entity.ArrayEntity;
-import com.kozich.arraytask.service.array.SearchElements;
+import com.kozich.arraytask.service.SearchElements;
 
 public class SearchElementsImpl implements SearchElements {
 

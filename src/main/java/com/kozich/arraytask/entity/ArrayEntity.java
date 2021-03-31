@@ -7,10 +7,6 @@ public class ArrayEntity {
     private int[] currentArray;
 
 
-    public ArrayEntity() {
-
-    }
-
     public ArrayEntity(int... array) {
         this.currentArray = array;
     }

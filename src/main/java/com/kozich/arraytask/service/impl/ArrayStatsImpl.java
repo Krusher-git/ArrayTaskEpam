@@ -1,7 +1,8 @@
-package com.kozich.arraytask.service.array.impl;
+package com.kozich.arraytask.service.impl;
 
 import com.kozich.arraytask.entity.ArrayEntity;
-import com.kozich.arraytask.service.array.ArrayStats;
+import com.kozich.arraytask.service.ArrayStats;
+import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -15,7 +16,7 @@ public class ArrayStatsImpl implements ArrayStats {
         for (int current : currentArray) {
             middleValue += current;
         }
-        logger.info("Middle value is " + ((double) middleValue / currentArray.length));
+        logger.log(Level.INFO, "Middle value is " + ((double) middleValue / currentArray.length));
         return (double) middleValue / currentArray.length;
     }
 
@@ -37,10 +38,10 @@ public class ArrayStatsImpl implements ArrayStats {
             }
         }
         if (!negative) {
-            logger.info("The amount of positive elements is " + (currentArray.length - amount));
+            logger.log(Level.INFO, "The amount of positive elements is " + (currentArray.length - amount));
             return currentArray.length - amount;
         } else {
-            logger.info("The amount of negative elements is " + amount);
+            logger.log(Level.INFO, "The amount of negative elements is " + amount);
             return amount;
         }
     }

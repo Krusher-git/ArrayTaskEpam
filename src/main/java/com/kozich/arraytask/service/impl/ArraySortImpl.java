@@ -1,7 +1,8 @@
-package com.kozich.arraytask.service.array.impl;
+package com.kozich.arraytask.service.impl;
 
 import com.kozich.arraytask.entity.ArrayEntity;
-import com.kozich.arraytask.service.array.ArraySort;
+import com.kozich.arraytask.service.ArraySort;
+import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -20,7 +21,7 @@ public class ArraySortImpl implements ArraySort {
                 }
             }
         }
-        logger.info("Sorted with bubble sort");
+        logger.log(Level.INFO, "Sorted with bubble sort");
     }
 
     public void quickSort(ArrayEntity arrayEntity, int left, int right) {
@@ -51,7 +52,7 @@ public class ArraySortImpl implements ArraySort {
 
         if (right > i)
             quickSort(arrayEntity, i, right);
-        logger.info("Sorted with quick sort");
+        logger.log(Level.INFO, "Sorted with quick sort");
     }
 
     public void selectSort(ArrayEntity arrayEntity) {
@@ -68,6 +69,6 @@ public class ArraySortImpl implements ArraySort {
             currentArray[current] = currentArray[i];
             currentArray[i] = temp;
         }
-        logger.info("Sorted with select sort");
+        logger.log(Level.INFO, "Sorted with select sort");
     }
 }
