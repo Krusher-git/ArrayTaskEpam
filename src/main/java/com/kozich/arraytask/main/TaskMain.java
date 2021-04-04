@@ -1,4 +1,4 @@
-package com.kozich.arraytask.Main;
+package com.kozich.arraytask.main;
 
 import com.kozich.arraytask.creator.Creator;
 import com.kozich.arraytask.entity.ArrayEntity;
