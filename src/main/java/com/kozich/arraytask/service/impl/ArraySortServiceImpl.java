@@ -1,12 +1,12 @@
 package com.kozich.arraytask.service.impl;
 
 import com.kozich.arraytask.entity.ArrayEntity;
-import com.kozich.arraytask.service.ArraySort;
+import com.kozich.arraytask.service.ArraySortService;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class ArraySortImpl implements ArraySort {
+public class ArraySortServiceImpl implements ArraySortService {
     static Logger logger = LogManager.getLogger();
 
     private void quickSortImpl(int[] currentArray, int left, int right) {

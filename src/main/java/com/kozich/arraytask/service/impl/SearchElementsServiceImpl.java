@@ -1,9 +1,9 @@
 package com.kozich.arraytask.service.impl;
 
 import com.kozich.arraytask.entity.ArrayEntity;
-import com.kozich.arraytask.service.SearchElements;
+import com.kozich.arraytask.service.SearchElementsService;
 
-public class SearchElementsImpl implements SearchElements {
+public class SearchElementsServiceImpl implements SearchElementsService {
 
 
     public int findMaxElement(ArrayEntity arrayEntity) {

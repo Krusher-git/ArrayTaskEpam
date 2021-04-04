@@ -1,10 +1,11 @@
-package com.kozich.arraytask.service.impl;
+package com.kozich.arraytask.service.stream;
 
 import com.kozich.arraytask.entity.ArrayEntity;
+import com.kozich.arraytask.service.ChangeArrayService;
 
 import java.util.Arrays;
 
-public class ChangeArrayInt {
+public class ChangeArrayServiceStreamImpl implements ChangeArrayService {
     public void changeAllPositiveElements(ArrayEntity arrayEntity) {
         int[] resultArray = Arrays.stream(arrayEntity.getCurrentArray())
                 .filter(s -> s > 0)
@@ -12,6 +13,7 @@ public class ChangeArrayInt {
                 .toArray();
         arrayEntity.setCurrentArray(resultArray);
     }
+
     public void changeAllEvenElements(ArrayEntity arrayEntity) {
         int[] resultArray = Arrays.stream(arrayEntity.getCurrentArray())
                 .filter(s -> s % 2 == 0)

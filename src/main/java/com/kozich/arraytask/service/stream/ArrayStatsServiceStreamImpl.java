@@ -1,10 +1,11 @@
-package com.kozich.arraytask.service.impl;
+package com.kozich.arraytask.service.stream;
 
 import com.kozich.arraytask.entity.ArrayEntity;
+import com.kozich.arraytask.service.ArrayStatsService;
 
 import java.util.Arrays;
 
-public class ArrayStatsInt {
+public class ArrayStatsServiceStreamImpl implements ArrayStatsService {
     public double getMiddleValue(ArrayEntity arrayEntity) {
 
         return Arrays.stream(arrayEntity.getCurrentArray())

@@ -1,33 +1,41 @@
 package com.kozich.arraytask.entity;
 
 
+import java.util.Arrays;
+
 public class ArrayEntity {
     private int[] currentArray;
 
     public ArrayEntity(int... array) {
+
         this.currentArray = array;
     }
 
     public int[] getCurrentArray() {
-        if (currentArray == null) {
-            /*TODO:
-               Replace return null with smth useful
-             */
-            return null;
-        }
-
-        int[] givenArray = new int[currentArray.length];
-        for (int i = 0; i < currentArray.length; i++) {
-            givenArray[i] = currentArray[i];
-        }
-        return givenArray;
+        return currentArray.clone();
     }
 
     public void setCurrentArray(int... currentArray) {
 
-        this.currentArray = currentArray;
+        this.currentArray = currentArray.clone();
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        ArrayEntity that = (ArrayEntity) o;
+        return Arrays.equals(getCurrentArray(), that.getCurrentArray());
+    }
+
+    @Override
+    public int hashCode() {
+        return Arrays.hashCode(getCurrentArray());
+    }
 
     @Override
     public String toString() {

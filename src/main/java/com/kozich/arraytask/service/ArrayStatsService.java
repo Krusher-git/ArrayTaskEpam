@@ -2,7 +2,7 @@ package com.kozich.arraytask.service;
 
 import com.kozich.arraytask.entity.ArrayEntity;
 
-public interface ArrayStats {
+public interface ArrayStatsService {
     double getMiddleValue(ArrayEntity arrayEntity);
 
     int getSum(ArrayEntity arrayEntity);
