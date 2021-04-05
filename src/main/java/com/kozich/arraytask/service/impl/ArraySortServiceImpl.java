@@ -7,7 +7,51 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class ArraySortServiceImpl implements ArraySortService {
-    static Logger logger = LogManager.getLogger();
+    private final static Logger logger = LogManager.getLogger();
+
+    public void bubbleSort(ArrayEntity arrayEntity) {
+        int[] currentArray = arrayEntity.getCurrentArray();
+        int n = currentArray.length;
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (currentArray[j] > currentArray[j + 1]) {
+                    int temp = currentArray[j];
+                    currentArray[j] = currentArray[j + 1];
+                    currentArray[j + 1] = temp;
+                }
+            }
+        }
+        logger.log(Level.INFO, "Sorted with bubble sort");
+        arrayEntity.setCurrentArray(currentArray);
+    }
+
+    public void quickSort(ArrayEntity arrayEntity) {
+        int[] currentArray = arrayEntity.getCurrentArray();
+        if (currentArray.length <= 0) {
+            return;
+        }
+        quickSortImpl(currentArray, 0, currentArray.length - 1);
+        arrayEntity.setCurrentArray(currentArray);
+        logger.log(Level.INFO, "Sorted with quick sort");
+    }
+
+    public void selectSort(ArrayEntity arrayEntity) {
+        int[] currentArray = arrayEntity.getCurrentArray();
+        int n = currentArray.length;
+        for (int i = 0; i < n - 1; i++) {
+            int current = i;
+            for (int j = i + 1; j < n; j++) {
+                if (currentArray[j] < currentArray[current]) {
+                    current = j;
+                }
+            }
+            int temp = currentArray[current];
+            currentArray[current] = currentArray[i];
+            currentArray[i] = temp;
+        }
+        logger.log(Level.INFO, "Sorted with select sort");
+        arrayEntity.setCurrentArray(currentArray);
+    }
 
     private void quickSortImpl(int[] currentArray, int left, int right) {
         int middle = (left + right) / 2;
@@ -34,49 +78,5 @@ public class ArraySortServiceImpl implements ArraySortService {
         if (right > i) {
             quickSortImpl(currentArray, i, right);
         }
-    }
-
-    public void bubbleSort(ArrayEntity arrayEntity) {
-        int[] currentArray = arrayEntity.getCurrentArray();
-        int n = currentArray.length;
-        for (int i = 0; i < n - 1; i++) {
-            for (int j = 0; j < n - i - 1; j++) {
-                if (currentArray[j] > currentArray[j + 1]) {
-                    int temp = currentArray[j];
-                    currentArray[j] = currentArray[j + 1];
-                    currentArray[j + 1] = temp;
-                }
-            }
-        }
-        logger.log(Level.INFO, "Sorted with bubble sort");
-        arrayEntity.setCurrentArray(currentArray);
-    }
-
-    public void quickSort(ArrayEntity arrayEntity, int left, int right) {
-        int[] currentArray = arrayEntity.getCurrentArray();
-        if (currentArray.length <= 0) {
-            return;
-        }
-        quickSortImpl(currentArray, left, right);
-        arrayEntity.setCurrentArray(currentArray);
-        logger.log(Level.INFO, "Sorted with quick sort");
-    }
-
-    public void selectSort(ArrayEntity arrayEntity) {
-        int[] currentArray = arrayEntity.getCurrentArray();
-        int n = currentArray.length;
-        for (int i = 0; i < n - 1; i++) {
-            int current = i;
-            for (int j = i + 1; j < n; j++) {
-                if (currentArray[j] < currentArray[current]) {
-                    current = j;
-                }
-            }
-            int temp = currentArray[current];
-            currentArray[current] = currentArray[i];
-            currentArray[i] = temp;
-        }
-        logger.log(Level.INFO, "Sorted with select sort");
-        arrayEntity.setCurrentArray(currentArray);
     }
 }

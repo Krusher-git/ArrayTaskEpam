@@ -6,10 +6,10 @@ import com.kozich.arraytask.service.ChangeArrayService;
 import java.util.Arrays;
 
 public class ChangeArrayServiceStreamImpl implements ChangeArrayService {
-    public void changeAllPositiveElements(ArrayEntity arrayEntity) {
+    public void changeAllLargeElements(ArrayEntity arrayEntity) {
         int[] resultArray = Arrays.stream(arrayEntity.getCurrentArray())
-                .filter(s -> s > 0)
-                .peek(s -> s = -1)
+                .filter(s -> s > 100)
+                .peek(s -> s = 1)
                 .toArray();
         arrayEntity.setCurrentArray(resultArray);
     }

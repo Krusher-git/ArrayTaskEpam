@@ -8,9 +8,9 @@ import org.apache.logging.log4j.Logger;
 
 public class ArrayStatsServiceImpl implements ArrayStatsService {
 
-    static Logger logger = LogManager.getLogger();
+    private final static Logger logger = LogManager.getLogger();
 
-    public double getMiddleValue(ArrayEntity arrayEntity) {
+    public double calculateMiddleValue(ArrayEntity arrayEntity) {
         int[] currentArray = arrayEntity.getCurrentArray();
         int middleValue = 0;
         for (int current : currentArray) {
@@ -20,7 +20,7 @@ public class ArrayStatsServiceImpl implements ArrayStatsService {
         return (double) middleValue / currentArray.length;
     }
 
-    public int getSum(ArrayEntity arrayEntity) {
+    public int calculateSum(ArrayEntity arrayEntity) {
         int[] currentArray = arrayEntity.getCurrentArray();
         int sum = 0;
         for (int current : currentArray) {
@@ -29,7 +29,7 @@ public class ArrayStatsServiceImpl implements ArrayStatsService {
         return sum;
     }
 
-    public int getAmountOfElements(ArrayEntity arrayEntity, boolean negative) {
+    public int calculateAmountOfElements(ArrayEntity arrayEntity, boolean negative) {
         int[] currentArray = arrayEntity.getCurrentArray();
         int amount = 0;
         for (int current : currentArray) {

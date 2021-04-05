@@ -24,12 +24,11 @@ public class CustomFileReaderImpl implements CustomFileReader {
         File file = new File(path);
         try (FileReader fileReader = new FileReader(file)) {
             Scanner scanner = new Scanner(fileReader);
-            boolean match = false;
-            while (!match) {
+            while (scanner.hasNext()) {
                 String check = scanner.nextLine();
                 if (DataValidator.isStringUseful(check)) {
                     arrayString = check;
-                    match = true;
+                    break;
                 }
             }
         } catch (IOException e) {

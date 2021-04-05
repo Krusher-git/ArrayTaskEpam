@@ -6,19 +6,19 @@ import com.kozich.arraytask.service.ArrayStatsService;
 import java.util.Arrays;
 
 public class ArrayStatsServiceStreamImpl implements ArrayStatsService {
-    public double getMiddleValue(ArrayEntity arrayEntity) {
+    public double calculateMiddleValue(ArrayEntity arrayEntity) {
 
         return Arrays.stream(arrayEntity.getCurrentArray())
                 .average()
                 .getAsDouble();
     }
 
-    public int getSum(ArrayEntity arrayEntity) {
+    public int calculateSum(ArrayEntity arrayEntity) {
         return Arrays.stream(arrayEntity.getCurrentArray())
                 .sum();
     }
 
-    public int getAmountOfElements(ArrayEntity arrayEntity, boolean negative) {
+    public int calculateAmountOfElements(ArrayEntity arrayEntity, boolean negative) {
         int result = (int) Arrays.stream(arrayEntity.getCurrentArray())
                 .filter((current) -> current > 0)
                 .count();

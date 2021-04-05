@@ -1,12 +1,75 @@
-2021-04-04 23:02:21,860 ERROR c.k.a.r.CustomFileReader [main] File is not useful
-2021-04-04 23:02:21,870 ERROR c.k.a.M.TaskMain [main] File does not fit the condition
-2021-04-04 23:09:43,031 ERROR c.k.a.r.CustomFileReader [main] File is not useful
-2021-04-04 23:09:43,033 ERROR c.k.a.M.TaskMain [main] File does not fit the condition
-2021-04-04 23:10:20,968 ERROR c.k.a.r.CustomFileReader [main] File is not useful
-2021-04-04 23:10:20,970 ERROR c.k.a.M.TaskMain [main] File does not fit the condition
-2021-04-04 23:10:30,559 ERROR c.k.a.r.CustomFileReader [main] File is not useful
-2021-04-04 23:10:30,561 ERROR c.k.a.M.TaskMain [main] File does not fit the condition
-2021-04-04 23:11:38,599 INFO c.k.a.p.ArrayParser [main] Array is created
-2021-04-04 23:18:27,464 INFO c.k.a.p.ArrayParser [main] Array is created
-2021-04-04 23:19:19,470 INFO c.k.a.p.ArrayParser [main] Array is created
-2021-04-04 23:19:19,473 INFO c.k.a.c.Creator [main] ArrayEntity is created
+2021-04-06 00:38:11,823 ERROR c.k.a.m.TaskMain [main] com.kozich.arraytask.exception.ArrayException: File doesn't match the condition
+2021-04-06 00:40:23,869 INFO c.k.a.p.i.ArrayParserImpl [main] Array is created
+2021-04-06 00:40:23,878 INFO c.k.a.c.Creator [main] ArrayEntity is created
+2021-04-06 00:41:39,765 ERROR c.k.a.m.TaskMain [main] com.kozich.arraytask.exception.ArrayException: File doesn't match the condition
+2021-04-06 00:44:00,939 ERROR c.k.a.m.TaskMain [main] com.kozich.arraytask.exception.ArrayException: File doesn't match the condition
+2021-04-06 00:45:46,290 ERROR c.k.a.m.TaskMain [main] com.kozich.arraytask.exception.ArrayException: File doesn't match the condition
+2021-04-06 00:46:11,063 ERROR c.k.a.m.TaskMain [main] com.kozich.arraytask.exception.ArrayException: File doesn't match the condition
+2021-04-06 00:46:27,508 ERROR c.k.a.m.TaskMain [main] com.kozich.arraytask.exception.ArrayException: File doesn't match the condition
+2021-04-06 00:46:47,692 ERROR c.k.a.m.TaskMain [main] com.kozich.arraytask.exception.ArrayException: File doesn't match the condition
+2021-04-06 00:47:39,124 ERROR c.k.a.m.TaskMain [main] com.kozich.arraytask.exception.ArrayException: File doesn't match the condition
+2021-04-06 00:48:09,198 ERROR c.k.a.m.TaskMain [main] com.kozich.arraytask.exception.ArrayException: File doesn't match the condition
+2021-04-06 00:49:22,707 INFO c.k.a.p.i.ArrayParserImpl [main] Array is created
+2021-04-06 00:49:22,716 INFO c.k.a.c.Creator [main] ArrayEntity is created
+2021-04-06 00:51:19,294 INFO c.k.a.p.i.ArrayParserImpl [main] Array is created
+2021-04-06 00:51:19,303 INFO c.k.a.c.Creator [main] ArrayEntity is created
+2021-04-06 00:53:13,332 INFO c.k.a.p.i.ArrayParserImpl [main] Array is created
+2021-04-06 00:53:45,186 INFO c.k.a.c.Creator [main] ArrayEntity is created
+2021-04-06 00:56:41,912 ERROR c.k.a.m.TaskMain [main] com.kozich.arraytask.exception.ArrayException: File doesn't match the condition
+2021-04-06 01:00:58,754 INFO c.k.a.p.i.ArrayParserImpl [main] Array is created
+2021-04-06 01:00:58,763 INFO c.k.a.c.Creator [main] ArrayEntity is created
+2021-04-06 01:01:08,098 INFO c.k.a.p.i.ArrayParserImpl [main] Array is created
+2021-04-06 01:01:08,101 INFO c.k.a.c.Creator [main] ArrayEntity is created
+2021-04-06 01:01:18,312 INFO c.k.a.p.i.ArrayParserImpl [main] Array is created
+2021-04-06 01:01:18,315 INFO c.k.a.c.Creator [main] ArrayEntity is created
+2021-04-06 01:01:23,024 INFO c.k.a.p.i.ArrayParserImpl [main] Array is created
+2021-04-06 01:01:23,027 INFO c.k.a.c.Creator [main] ArrayEntity is created
+2021-04-06 01:02:42,385 INFO c.k.a.p.i.ArrayParserImpl [main] Array is created
+2021-04-06 01:02:42,394 INFO c.k.a.c.Creator [main] ArrayEntity is created
+2021-04-06 01:39:24,486 INFO c.k.a.p.i.ArrayParserImpl [main] Array is created
+2021-04-06 01:39:24,489 INFO c.k.a.c.Creator [main] ArrayEntity is created
+2021-04-06 01:39:24,490 INFO c.k.a.s.i.ArraySortServiceImpl [main] Sorted with bubble sort
+2021-04-06 01:41:28,278 INFO c.k.a.p.i.ArrayParserImpl [main] Array is created
+2021-04-06 01:41:28,280 INFO c.k.a.c.Creator [main] ArrayEntity is created
+2021-04-06 01:42:33,487 INFO c.k.a.p.i.ArrayParserImpl [main] Array is created
+2021-04-06 01:42:33,490 INFO c.k.a.c.Creator [main] ArrayEntity is created
+2021-04-06 01:44:10,990 INFO c.k.a.p.i.ArrayParserImpl [main] Array is created
+2021-04-06 01:44:10,993 INFO c.k.a.c.Creator [main] ArrayEntity is created
+2021-04-06 01:44:10,993 INFO c.k.a.s.i.ArraySortServiceImpl [main] Sorted with quick sort
+2021-04-06 01:44:10,994 INFO c.k.a.s.i.ArraySortServiceImpl [main] Sorted with bubble sort
+2021-04-06 01:44:10,994 INFO c.k.a.s.i.ArraySortServiceImpl [main] Sorted with select sort
+2021-04-06 01:44:10,994 INFO c.k.a.s.i.ArrayStatsServiceImpl [main] The amount of positive elements is 4
+2021-04-06 01:44:10,994 INFO c.k.a.s.i.ArrayStatsServiceImpl [main] Middle value is 11.0
+2021-04-06 01:44:10,995 INFO c.k.a.s.i.ChangeArrayServiceImpl [main] All even elements have been changed
+2021-04-06 01:44:10,995 INFO c.k.a.s.i.ChangeArrayServiceImpl [main] All elements larger then 100 have been changed
+2021-04-06 01:59:17,223 INFO c.k.a.p.i.ArrayParserImpl [main] Array is created
+2021-04-06 02:00:22,936 INFO c.k.a.p.i.ArrayParserImpl [main] Array is created
+2021-04-06 02:01:39,691 INFO c.k.a.p.i.ArrayParserImpl [main] Array is created
+2021-04-06 02:02:22,154 INFO c.k.a.p.i.ArrayParserImpl [main] Array is created
+2021-04-06 02:02:45,861 INFO c.k.a.p.i.ArrayParserImpl [main] Array is created
+2021-04-06 02:06:25,657 INFO c.k.a.p.i.ArrayParserStreamImpl [main] Array is created
+2021-04-06 02:06:25,663 INFO c.k.a.p.i.ArrayParserImpl [main] Array is created
+2021-04-06 02:38:58,106 INFO c.k.a.s.i.ArraySortServiceImpl [main] Sorted with bubble sort
+2021-04-06 02:38:58,111 INFO c.k.a.s.i.ArrayStatsServiceImpl [main] The amount of negative elements is 1
+2021-04-06 02:38:58,113 INFO c.k.a.s.i.ArrayStatsServiceImpl [main] Middle value is 3.75
+2021-04-06 02:38:58,115 INFO c.k.a.s.i.ChangeArrayServiceImpl [main] All even elements have been changed
+2021-04-06 02:38:58,115 INFO c.k.a.s.i.ChangeArrayServiceImpl [main] All elements larger then 100 have been changed
+2021-04-06 02:38:58,121 INFO c.k.a.s.i.ArraySortServiceImpl [main] Sorted with quick sort
+2021-04-06 02:38:58,122 INFO c.k.a.s.i.ArraySortServiceImpl [main] Sorted with select sort
+2021-04-06 02:39:30,882 INFO c.k.a.s.i.ChangeArrayServiceImpl [main] All elements larger then 100 have been changed
+2021-04-06 02:39:36,834 INFO c.k.a.s.i.ArraySortServiceImpl [main] Sorted with bubble sort
+2021-04-06 02:39:36,841 INFO c.k.a.s.i.ArrayStatsServiceImpl [main] The amount of negative elements is 1
+2021-04-06 02:39:36,842 INFO c.k.a.s.i.ArrayStatsServiceImpl [main] Middle value is 3.75
+2021-04-06 02:39:36,843 INFO c.k.a.s.i.ChangeArrayServiceImpl [main] All even elements have been changed
+2021-04-06 02:39:36,844 INFO c.k.a.s.i.ChangeArrayServiceImpl [main] All elements larger then 100 have been changed
+2021-04-06 02:39:36,846 INFO c.k.a.s.i.ArraySortServiceImpl [main] Sorted with quick sort
+2021-04-06 02:39:36,846 INFO c.k.a.s.i.ArraySortServiceImpl [main] Sorted with select sort
+2021-04-06 02:42:31,751 INFO c.k.a.p.i.ArrayParserStreamImpl [main] Array is created
+2021-04-06 02:42:31,757 INFO c.k.a.p.i.ArrayParserImpl [main] Array is created
+2021-04-06 02:52:17,541 INFO c.k.a.s.i.ArraySortServiceImpl [main] Sorted with bubble sort
+2021-04-06 02:52:17,546 INFO c.k.a.s.i.ArrayStatsServiceImpl [main] The amount of negative elements is 1
+2021-04-06 02:52:17,547 INFO c.k.a.s.i.ArrayStatsServiceImpl [main] Middle value is 3.75
+2021-04-06 02:52:17,548 INFO c.k.a.s.i.ChangeArrayServiceImpl [main] All even elements have been changed
+2021-04-06 02:52:17,548 INFO c.k.a.s.i.ChangeArrayServiceImpl [main] All elements larger then 100 have been changed
+2021-04-06 02:52:17,550 INFO c.k.a.s.i.ArraySortServiceImpl [main] Sorted with quick sort
+2021-04-06 02:52:17,551 INFO c.k.a.s.i.ArraySortServiceImpl [main] Sorted with select sort

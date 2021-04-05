@@ -5,7 +5,7 @@ import com.kozich.arraytask.entity.ArrayEntity;
 public interface ArraySortService {
     void bubbleSort(ArrayEntity arrayEntity);
 
-    void quickSort(ArrayEntity arrayEntity, int left, int right);
+    void quickSort(ArrayEntity arrayEntity);
 
     void selectSort(ArrayEntity arrayEntity);
 }

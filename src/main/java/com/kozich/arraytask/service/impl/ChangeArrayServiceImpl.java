@@ -8,16 +8,16 @@ import org.apache.logging.log4j.Logger;
 
 public class ChangeArrayServiceImpl implements ChangeArrayService {
 
-    Logger logger = LogManager.getLogger();
+    private static final Logger logger = LogManager.getLogger();
 
-    public void changeAllPositiveElements(ArrayEntity arrayEntity) {
+    public void changeAllLargeElements(ArrayEntity arrayEntity) {
         int[] currentArray = arrayEntity.getCurrentArray();
         for (int i = 0; i < currentArray.length; i++) {
-            if (currentArray[i] > 0) {
-                currentArray[i] = -1;
+            if (currentArray[i] > 100) {
+                currentArray[i] = 1;
             }
         }
-        logger.log(Level.INFO, "All positive elements have been changed");
+        logger.log(Level.INFO, "All elements larger then 100 have been changed");
         arrayEntity.setCurrentArray(currentArray);
     }
 

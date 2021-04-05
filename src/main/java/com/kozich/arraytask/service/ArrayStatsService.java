@@ -3,9 +3,9 @@ package com.kozich.arraytask.service;
 import com.kozich.arraytask.entity.ArrayEntity;
 
 public interface ArrayStatsService {
-    double getMiddleValue(ArrayEntity arrayEntity);
+    double calculateMiddleValue(ArrayEntity arrayEntity);
 
-    int getSum(ArrayEntity arrayEntity);
+    int calculateSum(ArrayEntity arrayEntity);
 
-    int getAmountOfElements(ArrayEntity arrayEntity, boolean check);
+    int calculateAmountOfElements(ArrayEntity arrayEntity, boolean check);
 }
