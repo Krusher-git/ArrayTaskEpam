@@ -15,7 +15,7 @@ import java.util.stream.Stream;
 
 
 public class CustomFileReaderStreamImpl implements CustomFileReader {
-    static Logger logger = LogManager.getLogger();
+    private static Logger logger = LogManager.getLogger();
 
     public String readFileLine(String path) throws ArrayException {
         if (!DataValidator.isFileUseful(path)) {

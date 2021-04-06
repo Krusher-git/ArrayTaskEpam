@@ -11,7 +11,7 @@ public class Creator {
     public ArrayEntity createArrayEntity(int... currentArray) {
         int[] temporaryArray = currentArray.clone();
         ArrayEntity arrayEntity = new ArrayEntity(temporaryArray);
-        logger.log(Level.INFO,"ArrayEntity is created");
+        logger.log(Level.INFO, "ArrayEntity is created");
         return arrayEntity;
     }
 }

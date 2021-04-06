@@ -6,6 +6,7 @@ import com.kozich.arraytask.service.ArrayStatsService;
 import java.util.Arrays;
 
 public class ArrayStatsServiceStreamImpl implements ArrayStatsService {
+
     public double calculateMiddleValue(ArrayEntity arrayEntity) {
 
         return Arrays.stream(arrayEntity.getCurrentArray())
@@ -14,6 +15,7 @@ public class ArrayStatsServiceStreamImpl implements ArrayStatsService {
     }
 
     public int calculateSum(ArrayEntity arrayEntity) {
+
         return Arrays.stream(arrayEntity.getCurrentArray())
                 .sum();
     }

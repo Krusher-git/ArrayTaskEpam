@@ -1,7 +1,6 @@
 package com.kozich.arraytask.service;
 
 import com.kozich.arraytask.entity.ArrayEntity;
-import com.kozich.arraytask.service.impl.SearchElementsServiceImpl;
 import com.kozich.arraytask.service.stream.*;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -13,6 +12,7 @@ public class ArrayServiceImplStreamTest {
     private ArrayStatsServiceStreamImpl arrayStatsService;
     private ArraySortServiceStreamImpl arraySort;
     private ChangeArrayServiceStreamImpl changeArray;
+    private SearchElementsServiceStreamImpl searchElements;
 
     @BeforeClass
     public void setUp() {
@@ -20,6 +20,7 @@ public class ArrayServiceImplStreamTest {
         arrayStatsService = new ArrayStatsServiceStreamImpl();
         arraySort = new ArraySortServiceStreamImpl();
         changeArray = new ChangeArrayServiceStreamImpl();
+        searchElements = new SearchElementsServiceStreamImpl();
 
     }
 
@@ -52,7 +53,6 @@ public class ArrayServiceImplStreamTest {
         int[] currentArray = {1, 3, 5, 18, 10, 0};
         int expected = 18;
         arrayEntity.setCurrentArray(currentArray);
-        SearchElementsServiceImpl searchElements = new SearchElementsServiceImpl();
         assertEquals(searchElements.findMaxElement(arrayEntity), expected);
     }
 
@@ -61,7 +61,6 @@ public class ArrayServiceImplStreamTest {
         int[] currentArray = {1, 3, 5, 18, 10, 0};
         int expected = 0;
         arrayEntity.setCurrentArray(currentArray);
-        SearchElementsServiceImpl searchElements = new SearchElementsServiceImpl();
         assertEquals(searchElements.findMinElement(arrayEntity), expected);
     }
 

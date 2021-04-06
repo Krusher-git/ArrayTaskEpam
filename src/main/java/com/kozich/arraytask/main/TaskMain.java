@@ -56,7 +56,5 @@ public class TaskMain {
             logger.log(Level.ERROR, e);
         }
 
-
-//services;
     }
 }
