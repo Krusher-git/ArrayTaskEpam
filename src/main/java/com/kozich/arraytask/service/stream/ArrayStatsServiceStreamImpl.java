@@ -20,7 +20,7 @@ public class ArrayStatsServiceStreamImpl implements ArrayStatsService {
 
     public int calculateAmountOfElements(ArrayEntity arrayEntity, boolean negative) {
         int result = (int) Arrays.stream(arrayEntity.getCurrentArray())
-                .filter((current) -> current > 0)
+                .filter((current) -> current < 0)
                 .count();
         if (!negative) {
             return arrayEntity.getCurrentArray().length - result;

@@ -8,16 +8,14 @@ import java.util.Arrays;
 public class ChangeArrayServiceStreamImpl implements ChangeArrayService {
     public void changeAllLargeElements(ArrayEntity arrayEntity) {
         int[] resultArray = Arrays.stream(arrayEntity.getCurrentArray())
-                .filter(s -> s > 100)
-                .peek(s -> s = 1)
+                .map(s -> s > 100 ? 1 : s)
                 .toArray();
         arrayEntity.setCurrentArray(resultArray);
     }
 
     public void changeAllEvenElements(ArrayEntity arrayEntity) {
         int[] resultArray = Arrays.stream(arrayEntity.getCurrentArray())
-                .filter(s -> s % 2 == 0)
-                .peek(s -> s++)
+                .map(s -> s % 2 == 0 ? ++s : s)
                 .toArray();
         arrayEntity.setCurrentArray(resultArray);
     }

@@ -22,18 +22,17 @@ public class DataValidatorTest {
 
     @Test
     public void isFileUsefulTest() {
-        boolean expected = true;
-        Assert.assertEquals(DataValidator.isFileUseful(path), expected);
+        Assert.assertTrue(DataValidator.isFileUseful(path));
     }
 
     @Test
     public void isStringUsefulTrueTest() {
-        boolean expected = true;
-        Assert.assertEquals(DataValidator.isStringUseful(STRING_ARRAY), expected);
+
+        Assert.assertTrue(DataValidator.isStringUseful(STRING_ARRAY));
     }
+
     @Test
     public void isStringUsefulFalseTest() {
-        boolean expected = false;
-        Assert.assertEquals(DataValidator.isStringUseful(INCORRECT_STRING_ARRAY), expected);
+        Assert.assertFalse(DataValidator.isStringUseful(INCORRECT_STRING_ARRAY));
     }
 }
