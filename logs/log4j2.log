@@ -76,3 +76,24 @@
 2021-04-06 03:34:54,896 INFO c.k.a.s.s.ArraySortServiceStreamImpl [main]  Array sorted
 2021-04-06 03:34:54,906 INFO c.k.a.s.s.ChangeArrayServiceStreamImpl [main] Changed all even elements
 2021-04-06 03:34:54,907 INFO c.k.a.s.s.ChangeArrayServiceStreamImpl [main] Changed all elements larger than 100
+2021-04-06 03:50:00,321 INFO c.k.a.p.i.ArrayParserImpl [main] Array is created
+2021-04-06 03:50:00,324 INFO c.k.a.c.Creator [main] ArrayEntity is created
+2021-04-06 03:50:00,325 INFO c.k.a.s.i.ArraySortServiceImpl [main] Sorted with quick sort
+2021-04-06 03:50:00,325 INFO c.k.a.s.i.ArraySortServiceImpl [main] Sorted with bubble sort
+2021-04-06 03:50:00,325 INFO c.k.a.s.i.ArraySortServiceImpl [main] Sorted with select sort
+2021-04-06 03:50:00,325 INFO c.k.a.s.i.ArrayStatsServiceImpl [main] The amount of positive elements is 4
+2021-04-06 03:50:00,326 INFO c.k.a.s.i.ArrayStatsServiceImpl [main] Middle value is 11.0
+2021-04-06 03:50:00,326 INFO c.k.a.s.i.ChangeArrayServiceImpl [main] All even elements have been changed
+2021-04-06 03:50:00,326 INFO c.k.a.s.i.ChangeArrayServiceImpl [main] All elements larger then 100 have been changed
+2021-04-06 11:11:01,486 INFO c.k.a.p.i.ArrayParserStreamImpl [main] Array is created
+2021-04-06 11:11:01,501 INFO c.k.a.p.i.ArrayParserImpl [main] Array is created
+2021-04-06 11:11:15,241 INFO c.k.a.s.s.ArraySortServiceStreamImpl [main]  Array sorted
+2021-04-06 11:11:15,273 INFO c.k.a.s.s.ChangeArrayServiceStreamImpl [main] Changed all even elements
+2021-04-06 11:11:15,273 INFO c.k.a.s.s.ChangeArrayServiceStreamImpl [main] Changed all elements larger than 100
+2021-04-06 11:11:32,446 INFO c.k.a.s.i.ArraySortServiceImpl [main] Sorted with bubble sort
+2021-04-06 11:11:32,462 INFO c.k.a.s.i.ArrayStatsServiceImpl [main] The amount of negative elements is 1
+2021-04-06 11:11:32,462 INFO c.k.a.s.i.ArrayStatsServiceImpl [main] Middle value is 3.75
+2021-04-06 11:11:32,462 INFO c.k.a.s.i.ChangeArrayServiceImpl [main] All even elements have been changed
+2021-04-06 11:11:32,462 INFO c.k.a.s.i.ChangeArrayServiceImpl [main] All elements larger then 100 have been changed
+2021-04-06 11:11:32,462 INFO c.k.a.s.i.ArraySortServiceImpl [main] Sorted with quick sort
+2021-04-06 11:11:32,462 INFO c.k.a.s.i.ArraySortServiceImpl [main] Sorted with select sort

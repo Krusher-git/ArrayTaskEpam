@@ -20,7 +20,7 @@ public class CustomFileReaderStreamImpl implements CustomFileReader {
     public String readFileLine(String path) throws ArrayException {
         if (!DataValidator.isFileUseful(path)) {
             logger.log(Level.ERROR, "File is not useful");
-            throw new ArrayException("File does not exist or is not a file");
+            throw new ArrayException("File is not useful");
         }
         String arrayString = null;
         Path filePath = Paths.get(path);
